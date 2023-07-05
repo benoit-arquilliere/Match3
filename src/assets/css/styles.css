@@ -1,0 +1,40 @@
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+.gem {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FF0000;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.gem.fall-animation {
+    animation: fallAnimation 0.6s;
+}
+
+@keyframes fallAnimation {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
